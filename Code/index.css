@@ -1,0 +1,149 @@
+*{
+    margin:0px; 
+    font-family: sans-serif;
+    box-sizing: border-box; 
+}
+#one{
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 2px 4px;
+    position: fixed;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+}
+#nav1{
+    margin-top:35px;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    font-family:HelveticaNeueLTPro-Roman,HelveticaNeue-Roman,Helvetica Neue Roman,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+}
+#nav1 a{
+    padding-right: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+}
+#nav1 a:hover{
+    background-color: rgb(234, 234, 234);
+}
+#nav a:visited{
+    color: black;
+}
+
+#one2{
+    width:300px;
+    height: 30px;
+    margin-top: 28px;
+    margin-left: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+#one2 img{
+    width: 30px;
+    height: 25px;
+}
+#one2 img:hover{
+    outline: 2px solid black;
+    outline-offset: 3px;
+    transition-delay: 0.1;
+
+}
+#two{
+    padding-top: 10px;
+    height:30px;
+    background-color: black;
+    color: white;
+}
+#three{
+    height: 400px;
+    background-color: beige;
+    display: flex;
+}
+.th1{
+    width:35%;
+    margin-left:13%;
+}
+.th2{
+    width:35%;
+    margin-left:10%;
+
+}
+#four{
+    height: 400px;
+    background-color:bisque;
+    display: flex;
+}
+.th3{
+    width:35%;
+    margin-left:15%;
+}
+.th4{
+    width:35%;
+
+}
+.newarr:hover{
+    outline: 2px solid black;
+    outline-offset: 5px;
+  
+}
+.five{
+    background-color:white;
+    width: 100%;
+    height:450px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.five1,.five2,.five3,.five4{
+    width: 16%;
+    height: 350px;
+    background-color: black;
+    color:white;
+    font-size: 17px;
+    
+}
+.five1:hover,.five2:hover,.five3:hover,.five4:hover{
+    background-color: white;
+    border:2px solid black;
+    color:black; 
+    box-shadow: 2px 2px 6px black ;
+}
+#about4{
+    width: 100%;
+    height: 500px;
+    background-color: #F4F4F2;
+}
+#six{
+    height:400px;
+    background-color: black;display: flex; 
+}
+#footer{
+    width: 80%;
+    height: 250px;
+    margin-left: 0%;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+}
+.six1{
+    margin-top: 0px;
+    width:20%;
+    height:100%;
+    margin-top: 100px;
+    text-align: left;
+}
+.six1 a{
+    text-decoration: none;
+    color: white;
+}
+.six1 a:hover{
+    text-decoration: underline;
+}
+
+
+
+

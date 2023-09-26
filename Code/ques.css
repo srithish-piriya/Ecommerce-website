@@ -1,0 +1,32 @@
+/*ques.html*/
+#qbutton{
+   
+    margin-left: 43%;
+    width: 12%;
+    height: 50px;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+#qbutton:hover{
+    outline: 2px solid black;
+    outline-offset:5px ;
+}
+.last{
+    width: 80%;
+    margin-left:10%;
+    padding: 15px 0;
+    padding-top: 25px;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    border-bottom: 1px solid grey;
+}
+.six1 img:hover {
+    border: 2px solid white;
+}
