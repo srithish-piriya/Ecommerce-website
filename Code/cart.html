@@ -11,82 +11,72 @@
 </head>
 
 <body>
-    
-        <div id="one">
-            <a href="index.html"><img src="images/logo.png"
-                    style="height: 50px;width: 50px;margin-top: 15px;margin-left: 50px;"></a>
-            <div style="height: 50px;width: 400px; margin-top: 26px;margin-left: 10px;">
-                <h2
-                    style="font-family:HelveticaNeueLTPro-Roman,HelveticaNeue-Roman,Helvetica Neue Roman,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;">
-                    SoulSociety</h2>
-            </div>
-            <div style="margin-left: -9%;">
-                <nav id="nav1">
-                    <a href="index.html">HOME</a>
-                    <a href="about.html">ABOUT</a>
-                    <a href="ques.html">FAQ's</a>
-                    <a href="support.html">SUPPORT</a>
-                </nav>
-            </div>
-            <div id="one2">
-                <a href="#"> <img src="images/search logo.png"></a>
-                <a href="wishlist.html"> <img src="images/wishlogo.png"></a>
-                <a href="cart.html"> <img src="images/cartlogo.png"></a>
-                <a href="accont.html" target="_blank"><img src="images/accntlogo.png"></a>
-            </div>
-        </div>
-        <br><br><br><br>
 
-
-        <div class='box-main'>
-            <div class='head'>
-                <h1>Item</h1>
-            </div>
-            <div class='head'>
-                <h1>Name</h1>
-            </div>
-            <div class='head'>
-                <h2>Price</h2>
-            </div>
+    <div id="one">
+        <a href="index.html"><img src="images/logo.png"
+                style="height: 50px;width: 50px;margin-top: 15px;margin-left: 50px;"></a>
+        <div style="height: 50px;width: 400px; margin-top: 26px;margin-left: 10px;">
+            <h2
+                style="font-family:HelveticaNeueLTPro-Roman,HelveticaNeue-Roman,Helvetica Neue Roman,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;">
+                SoulSociety</h2>
         </div>
+        <div style="margin-left: -9%;">
+            <nav id="nav1">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="ques.html">FAQ's</a>
+                <a href="support.html">SUPPORT</a>
+            </nav>
+        </div>
+        <div id="one2">
+            <a href="#"> <img src="images/search logo.png"></a>
+            <a href="wishlist.html"> <img src="images/wishlogo.png"></a>
+            <a href="cart.html"> <img src="images/cartlogo.png"><span id="cart-item-count">0</span></a>
+            <a href="accont.html" target="_blank"><img src="images/accntlogo.png"></a>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+    <p class="cart-1">Shopping Cart</p>
 
 </body>
-    <script>
-       
-        let total=0;
-function displaycart(){
-    var rcart= JSON.parse(localStorage.getItem('cart'))
-    if (rcart.length==0){
-        document.getElementById('cartItem').innerHTML="your cart is Empty ";
-    }
-    else{
-        for(let index=0;index<rcart.length;index++){
-            document.write(`<div class='box'>
+<script>
+
+    let total = 0;
+    function displaycart() {
+        var rcart = JSON.parse(localStorage.getItem('cart'));
+        if (rcart.length == 0) {
+            document.getElementById('cartItem').innerHTML = "your cart is Empty ";
+        }
+        else {
+            for (let index = 0; index < rcart.length; index++) {
+                document.write(`<div class='container' ><div class='box' data-price="${parseInt(rcart[index].price)}">
             <div class = 'img-box same'>
                 <img class='images' src =${rcart[index].image}></img>
             </div>
             <div class='same'>
                  <h2>${rcart[index].title}</h2>
             </div>
-            <div class='same'>
-                <h2>₹ ${rcart[index].price}.00</h2> 
+            <div class='same'  >
+                <h2 id='price' id='${index}'>₹ ${rcart[index].price}</h2> 
             </div>
-            </div>`) 
-            total=total+rcart[index].price;
-        }
-        document.write(` <div class='box-main'>
+            <a onclick='deleteitem(this)'><img class="del" src='images/delete.jpg'></a>
+            </div>`)
+                total = total + rcart[index].price;
+            }
+            document.write(` <div class='box-main'>
         <div class = 'head'>
             <h1></h1>
         </div>
         <div class='head'>
-             <h2>Total Amout</h2>
+             <h2>Total Amount</h2>
         </div>
         <div class='head'>
-            <h2> ₹ ${total}.00</h2> 
+            <h2 id ='total-price'> ₹ ${total}</h2> 
         </div>
         </div>`)
-    }
-    document.write(`<br><br><button class='js-button' onclick="location.href=('payment.html')">Buy Now</button><br><br><br><br>
+        }
+        document.write(`<br><br><button class='js-button' onclick="location.href=('payment.html')">Proceed to pay</button><br><br><br><br>
          <div id="six">
         <img src="images/Black & White Minimalist Business Logo.png" style="height: 200px;width: 200px;">
         <br>
@@ -134,9 +124,48 @@ function displaycart(){
 
     </div>`)
 
-}
-displaycart();
+    }
+    function deleteitem(item) {
+        var cartItem = item.parentNode;
+        //var price = document.getElementById('price')
+       //var itemPrice = parseFloat(price.innerText.replace('₹', ''));
+        var itemPrice = cartItem.getAttribute('data-price');
+        console.log(itemPrice);
+        cartItem.parentNode.removeChild(cartItem);
+        updateTotalPrice(-itemPrice);
+        removeFromCart();
+    }
 
-    </script>
+
+    function updateTotalPrice(change) {
+        var totalPriceElement = document.getElementById('total-price');
+        var currentTotal = parseFloat(totalPriceElement.innerText.replace('₹', ''));
+        console.log(currentTotal)
+        var newTotal = currentTotal + change;
+        totalPriceElement.innerText = '₹' + newTotal.toFixed(2);
+    }
+
+
+    console.log()
+
+
+    cartItemCount = JSON.parse(localStorage.getItem('cart')).length;
+
+    function updateCartItemCount() {
+        const cartItemCountElement = document.getElementById('cart-item-count');
+        cartItemCountElement.textContent = cartItemCount.toString();
+    }
+
+
+    function removeFromCart() {
+        if (cartItemCount > 0) {
+            cartItemCount--;
+            updateCartItemCount();
+        }
+    }
+    displaycart();
+    updateCartItemCount();
+
+</script>
 
 </html>

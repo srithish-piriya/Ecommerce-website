@@ -174,3 +174,13 @@
     line-height: 26px;
 }
 
+#cart-item-count {
+    position: absolute;
+    background-color: aqua;
+    color: rgb(77, 75, 75);
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-left: -5px;
+}

@@ -8,6 +8,7 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="men.css">
+
 </head>
 
 <body style="background-color: #F4F9F9;">
@@ -32,7 +33,7 @@
                 <div id="one2">
                     <a href="#"> <img src="images/search logo.png"></a>
                     <a href="wishlist.html"> <img src="images/wishlogo.png"></a>
-                    <a onclick="pass()"> <img src="images/cartlogo.png"></a>
+                    <a onclick="pass()"> <img src="images/cartlogo.png"><span id="cart-item-count">0</span></a>
                     <a href="accont.html" target="_blank"><img src="images/accntlogo.png"></a>
                 </div>
             </div>
@@ -79,282 +80,418 @@
             <br><br>
             <h3 style="font-size: 30px;margin-left: 2%;">Over-Sized T-shirts</h3>
             <br><br>
-            <div class="men1">
-                <div class="men2">
-                    <a href=""><img src="images/ov1.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Gear5 - ₹500 <span
-                                style="text-decoration: line-through;font-weight: 400;">₹600</span></h2>
+
+            <div class="product-container">
+                <div class="product-card">
+                    <a href="product.html"><img class="product-img" src="images/ov1.webp"></a>
+                    <div>
+                        <h3 class="product-title">Gear 5 T-shirt</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('0'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Mens gear-5 Graphic Printed Oversized T-shirt
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 500</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('0');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/ov2.webp"
-                            style="width:100%;height:75% ;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">JAWAN - ₹500 </h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/ov2.webp"></a>
+                    <div>
+                        <h3 class="product-title">JAWAN T-shirt</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('1'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Mens JAWAN Graphic Printed Oversized T-shirt
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 500</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('1');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/ov3.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Micky - ₹500 </h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/ov3.webp"></a>
+                    <div>
+                        <h3 class="product-title">Mickey Mouse T-shirt</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('2'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Mens Mickey Mouse Graphic Printed Oversized T-shirt<br>
+
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 500</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('2');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/ov4.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Flash - ₹500 </h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/ov4.webp"></a>
+                    <div>
+                        <h3 class="product-title">Flash T-shirt</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('3'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Mens Flash Graphic Printed Oversized T-shirt<br>
+
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 500</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('3');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
-                </div>
-                <div class="men2">
-                    <a href=""><img src="images/ov5.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Moon-Knight -₹500</h2>
-                    </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('4'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
-                    </div>
+
                 </div>
 
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/ov5.webp"></a>
+                    <div>
+                        <h3 class="product-title">Moon Knight T-shirt</h3>
+                    </div>
+                    <div>
+                        <p class="product-desc">
+                            Mens Moon Knight Graphic Printed Oversized T-shirt
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 500</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('4');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
 
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
             <br><br>
             <br>
             <h3 style="font-size: 30px;margin-left: 2%;">Winter Wear</h3>
             <br><br>
-            <div class="men1">
-                <div class="men2">
-                    <a href=""><img src="images/hoodie.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Hoddie - ₹850</h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/hoodie.webp"></a>
+                    <div>
+                        <h3 class="product-title">Hoddie</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('0'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Mens Graphic Printed Oversized Hoddie
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 850</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('5');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/ww2.webp"
-                            style="width:100%;height:75% ;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Grey jacket - ₹850</h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/ww2.webp"></a>
+                    <div>
+                        <h3 class="product-title">Black & Grey Jacket</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('1'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Black & Grey light-weight weather proof jacket for men
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 850</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('6');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/ww3.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Orange Jacket - ₹850</h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/ww3.webp"></a>
+                    <div>
+                        <h3 class="product-title">Orange Zipper Jacket</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('2'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Orange lightweight weatherproof jacket for men
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 850</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('7');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/ww4.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Blue jacket - ₹850</h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/ww4.webp"></a>
+                    <div>
+                        <h3 class="product-title">Blue Zipper Jacket</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('3'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Blue light-weight weatherproof jacket for men
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 850</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('8');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
-                </div>
-                <div class="men2">
-                    <a href=""><img src="images/ww5.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Brown jacket - ₹850</h2>
-                    </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('4'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 7%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
-                    </div>
+
                 </div>
 
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/ww5.webp"></a>
+                    <div>
+                        <h3 class="product-title">Brown Zipper Jacket</h3>
+                    </div>
+                    <div>
+                        <p class="product-desc">
+                            Brown leather light-weight weatherproof jacket for men
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 850</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('9');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
 
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <br><br>
             <br>
             <h3 style="font-size: 30px;margin-left: 2%;">Joggers & Trousers </h3>
             <br><br>
-            <div class="men1">
-                <div class="men2">
-                    <a href=""><img src="images/trouser.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Trouser - ₹950 </h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/trouser.webp"></a>
+                    <div>
+                        <h3 class="product-title">White Trouser</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('0'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            White slim fit 100% cotton Trouser for men
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 950</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('10');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/trouser.webp"
-                            style="width:100%;height:75% ;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Trouser - ₹950 </h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/trouser.webp"></a>
+                    <div>
+                        <h3 class="product-title">White Trouser</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('1'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            White slim-fit 100% cooton trouser for men
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 950</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('11');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/tr5.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Batman Jogger - ₹950</h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/tr3.webp"></a>
+                    <div>
+                        <h3 class="product-title">White Jogger</h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('2'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            White 100% cotton jogger for men with baggy pockets
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 950</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('12');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="men2">
-                    <a href=""><img src="images/tr3.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">White Jogger - ₹950</h2>
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/tr4.webp"></a>
+                    <div>
+                        <h3 class="product-title">Brown Jogger </h3>
                     </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('3'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
+                    <div>
+                        <p class="product-desc">
+                            Brown cotton jogger with baggy pockets
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 950</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('13');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
+
+                        </div>
                     </div>
-                </div>
-                <div class="men2">
-                    <a href=""><img src="images/tr4.webp"
-                            style="width:100%;height:75%;border-top-left-radius:20px;border-top-right-radius: 20px;"></a>
-                    <br>
-                    <div style="text-align: center;border-bottom:1px solid ;">
-                        <h2 style="font-size: 18px;">Brown Jogger - ₹950</h2>
-                    </div>
-                    <br>
-                    <div style="display: flex;align-items: center;">
-                        <button
-                            style="color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;background-color:aqua;font-weight: 600; border: aqua 2px solid;"
-                            onclick="Addtocart('4'); ">Add to Cart</button>
-                        <button
-                            style="background-color:black;width:120px;height:40px;border-radius: 30px;margin-left: 2%;color:white;font-weight: 600;"
-                            onclick="location.href=('product.html')">BUY NOW</button>
-                    </div>
+
                 </div>
 
+                <div class="product-card">
+                    <a href="product.html"> <img class="product-img" src="images/tr5.webp"></a>
+                    <div>
+                        <h3 class="product-title">Batman Jogger</h3>
+                    </div>
+                    <div>
+                        <p class="product-desc">
+                            Batman logo printed Jogger with baggy pockets
+                        </p>
+                        <div class="input">
+                            <select class="custom-select">
+                                <option selected>Size</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <h4>₹ 950</h5>
+                                <button class="addtocart-btn" onclick="Addtocart('14');"><img class="add-icon"
+                                        src="images/cartlogo.png">Add to Cart</button>
 
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
             <br><br><br><br>
             <div style="display: flex;">
                 <div style="height:50px;width:11%;background-color: black;justify-content: center;align-items: center;margin-left: 87%;"
@@ -419,62 +556,128 @@
 
     </div>
 </body>
-<script >
-    const product =[
-    {
-        id:0,
-        image:'images/ov1.webp',
-        title:"gear 5 T shirt",
-        price:500
-    },
-    {
-        id:1,
-        image:'images/ov1.webp',
-        title:"gear 5 T shirt",
-        price:500
-    },
-    {
-        id:2,
-        image:'images/ov1.webp',
-        title:"gear 5 T shirt",
-        price:500
-    },
-    {
-        id:3,
-        image:'images/ov1.webp',
-        title:"gear 5 T shirt",
-        price:500
-    },
-    {
-        id:4,
-        image:'images/ov1.webp',
-        title:"gear 5 T shirt",
-        price:500
-    },
-    {
-        id:5,
-        image:'images/ov1.webp',
-        title:"gear 5 T shirt",
-        price:500
-    },
-];
+<script>
+    const product = [
+        {
+            id: 0,
+            image: 'images/ov1.webp',
+            title: "Gear 5 T-shirt",
+            price: 500
+        },
+        {
+            id: 1,
+            image: 'images/ov2.webp',
+            title: "Jawan T-shirt",
+            price: 500
+        },
+        {
+            id: 2,
+            image: 'images/ov3.webp',
+            title: "Mickey Mouse T-shirt",
+            price: 500
+        },
+        {
+            id: 3,
+            image: 'images/ov4.webp',
+            title: "Flash T-shirt",
+            price: 500
+        },
+        {
+            id: 4,
+            image: 'images/ov5.webp',
+            title: "Moon Knight T-shirt",
+            price: 500
+        },
+        {
+            id: 5,
+            image: 'images/hoodie.webp',
+            title: "Hoddie",
+            price: 850
+        },
+        {
+            id: 6,
+            image: 'images/ww2.webp',
+            title: "Grey Jacket",
+            price: 850
+        },
+        {
+            id: 7,
+            image: 'images/ww3.webp',
+            title: "Orange Jacket",
+            price: 850
+        },
+        {
+            id: 8,
+            image: 'images/ww4.webp',
+            title: "Blue Jacket",
+            price: 850
+        },
+        {
+            id: 9,
+            image: 'images/ww5.webp',
+            title: "Brown Jacket",
+            price: 850
+        },
+        {
+            id: 10,
+            image: 'images/trouser.webp',
+            title: "Trouser",
+            price: 950
+        },
+        {
+            id: 11,
+            image: 'images/trouser.webp',
+            title: "Trouser",
+            price: 950
+        },
+        {
+            id: 12,
+            image: 'images/tr3.webp',
+            title: "Batman Joggers",
+            price: 950
+        },
+        {
+            id: 13,
+            image: 'images/tr4.webp',
+            title: "White Jogger",
+            price: 950
+        },
+        {
+            id: 14,
+            image: 'images/tr5.webp',
+            title: "Brown Jogger",
+            price: 950
+        },
+
+    ];
 
 
-var cart=[];
+    cart = JSON.parse(localStorage.getItem('cart'));
+    let cartItemCount = cart.length;
+    updateCartItemCount();
 
-function Addtocart(a){
-    
-    cart.push(product[a]);
-    alert("Item added to cart");
-    console.log(product[a])
+    function Addtocart(a) {
 
-} 
-function pass(){
-    console.log(cart)
-    localStorage.setItem('cart',JSON.stringify(cart));
-    window.location.href="cart.html";
-    
-}
+        cart.push(product[a]);
+        alert("Item added to cart");
+        console.log(product[a])
+        cartItemCount++;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartItemCount();
+
+    }
+    function pass() {
+        console.log(cart)
+        localStorage.setItem('cart', JSON.stringify(cart));
+        window.location.href = "cart.html";
+
+    }
+
+    function updateCartItemCount() {
+        console.log(cart);
+        const cartItemCountElement = document.getElementById('cart-item-count');
+        cartItemCountElement.textContent = cartItemCount.toString();
+    }
 
 
 </script>

@@ -24,7 +24,7 @@
             <div id="one2"> 
                 <a href="#"> <img src="images/search logo.png"></a>
                 <a href="wishlist.html">  <img src="images/wishlogo.png"></a>
-                <a href="cart.html">  <img src="images/cartlogo.png"></a>
+                <a onclick="pass()">  <img src="images/cartlogo.png"><span id="cart-item-count">0</span></a>
                <a href="accont.html" target="_blank"><img src="images/accntlogo.png"></a>
             </div>    
         </div>
@@ -145,4 +145,16 @@
            
      </div>
 </body>
+<script>
+    
+    var cart = [];
+    let cartItemCount = 0;
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+
+    function pass() {
+        window.location.href = "cart.html";
+
+    }
+</script>
 </html>
